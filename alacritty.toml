@@ -1,0 +1,16 @@
+[window]
+
+option_as_alt = "OnlyLeft"
+
+[keyboard]
+
+bindings = [
+  # To enable C-/ for Emacs
+  # This combination is non-standard
+  { key = "Slash", mods = "Control", chars = "\u001f" }
+]
+
+[font]
+
+size = 14
+normal = { family = "Andale Mono", style = "Regular" }
