@@ -5,8 +5,7 @@ option_as_alt = "OnlyLeft"
 [keyboard]
 
 bindings = [
-  # To enable C-/ for Emacs
-  # This combination is non-standard
+  # To make C-/ works like C-_ in Emacs
   { key = "Slash", mods = "Control", chars = "\u001f" }
 ]
 
