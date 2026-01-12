@@ -1,13 +1,16 @@
 ;; packages
-;; vertico find-file-in-project rainbow-delimiters
+;; vertico find-file-in-project rainbow-delimiters xclip
 
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-(xterm-mouse-mode 1)
 (electric-pair-mode 1)
+(unless (display-graphic-p)
+  (xterm-mouse-mode 1)
+  (xclip-mode 1)
+)
 (setq-default indent-tabs-mode nil)
 (setq inhibit-splash-screen t)
 (setq column-number-mode t)
@@ -39,3 +42,7 @@
 ;; shortcuts
 (global-set-key [f1] 'ffip)
 (global-set-key [f12] 'rgrep)
+(global-set-key [f15] 'other-window)
+
+;; enable f15 and beyond
+(define-key input-decode-map "\e[28~" [f15])

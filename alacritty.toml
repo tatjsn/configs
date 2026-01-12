@@ -6,7 +6,10 @@ option_as_alt = "OnlyLeft"
 
 bindings = [
   # To make C-/ works like C-_ in Emacs
-  { key = "Slash", mods = "Control", chars = "\u001f" }
+  { key = "Slash", mods = "Control", chars = "\u001f" },
+
+  # Map C-Tab to f15
+  { key= "Tab", mods = "Control", chars = "\u001b[28~" }
 ]
 
 [font]
