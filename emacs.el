@@ -1,5 +1,7 @@
 ;; packages
-;; vertico find-file-in-project rainbow-delimiters xclip
+;; vertico rainbow-delimiters xclip deadgrep hotfuzz
+;; brew
+;; ripgrep
 
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -40,9 +42,14 @@
 (vertico-mode)
 
 ;; shortcuts
-(global-set-key [f1] 'ffip)
-(global-set-key [f12] 'rgrep)
+(global-set-key [f1] 'project-find-file)
+;;(global-set-key [f12] 'rgrep)
+(global-set-key [f12] 'deadgrep)
 (global-set-key [f15] 'other-window)
 
 ;; enable f15 and beyond
 (define-key input-decode-map "\e[28~" [f15])
+
+(use-package hotfuzz
+  :custom
+  (completion-styles '(hotfuzz)))
