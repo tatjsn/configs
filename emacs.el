@@ -23,10 +23,6 @@
 ;; C-x C-0 to size buffer text
 ")
 
-(setq completion-styles '(flex basic))
-(setq completion-category-defaults nil)
-(setq completion-category-overrides '((file (styles flex basic))))
-
 ;; ido-mode
 ;; (setq ido-enable-flex-matching t)
 ;; (setq ido-everywhere t)
