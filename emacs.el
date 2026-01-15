@@ -31,21 +31,26 @@
 ;; This works great with find-file-in-project (ffip)
 
 ;; rainbow-delimiters
-(require 'rainbow-delimiters)
-(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+(use-package rainbow-delimiters
+  :config
+  (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
 
 ;; better completion buffer
-(vertico-mode)
+(use-package vertico
+  :config
+  (vertico-mode))
 
 ;; shortcuts
 (global-set-key [f1] 'project-find-file)
-;;(global-set-key [f12] 'rgrep)
+;; faster rgrep
+;; requires ripgrep binary
 (global-set-key [f12] 'deadgrep)
 (global-set-key [f15] 'other-window)
 
 ;; enable f15 and beyond
 (define-key input-decode-map "\e[28~" [f15])
 
+;; for vscode-like fuzzy search for project-find-file
 (use-package hotfuzz
   :custom
   (completion-styles '(hotfuzz)))
